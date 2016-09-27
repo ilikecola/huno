@@ -1,8 +1,8 @@
 
 <% if (is_home()) { %> 
-<header class="panel-cover">
+<header class="panel-cover animsition">
 <% } else { %>
-<header class="panel-cover panel-cover--collapsed">
+<header class="panel-cover panel-cover--collapsed animsition">
 <% } %>
 
   <div class="panel-main">
@@ -31,14 +31,49 @@
             <ul class="navigation">
 
               <% for (var i in theme.menu){ %>
-                <%
-                  if (theme.menu[i]+'' == '/#blog') {
-                    nav_btn_class = 'blog-button';
-                  } else {
-                    nav_btn_class = '';
-                  }
-                %>
-                <li class="navigation__item"><a href="<%- theme.menu[i] %>" title="" class="<%= nav_btn_class %>"><%= i %></a></li>
+                  <%
+                  if (theme.menu[i]+'' == '/') {
+                    nav_btn_class = 'home-button';
+                    new_tab = '';
+                    href = '';
+                  %>
+                    <li id="page-button-home" class="home_navigation__item navigation__item"><a style="cursor:pointer" title="" class="<%= nav_btn_class %>"><%= i %></a></li>
+                  <%
+                  }else if(theme.menu[i]+'' == '/#blog'){
+                  	nav_btn_class = 'blog-button';
+                  	new_tab = '';
+                    href = theme.menu[i]+'';
+                  %>
+                    <li id="page-button-blog" class="blog_navigation__item navigation__item"><a href="<%= href %>" title="" class="<%= nav_btn_class %>"><%= i %></a></li>
+                  <%
+                  }else if(theme.menu[i]+'' == '/#SS'){
+                  	nav_btn_class = 'other-button';
+                  	new_tab = '_blank';
+                  	href = 'https://ss.remiliascarlet.tk/auth/login';
+                  %>
+                  	<li id="page-button-ss" class="other_navigation__item navigation__item"><a href="<%- href %>" title="" class="<%= nav_btn_class %>"><%= i %></a></li>
+                  <% 
+                	}else if(theme.menu[i]+'' == '/about'){
+                		nav_btn_class = 'other-button';
+                  	new_tab = '';
+                  	href = theme.menu[i]+'';
+                	%>
+                  	<li id="page-button-about" class="other_navigation__item navigation__item"><a href="<%- href %>" title="" class="<%= nav_btn_class %>"><%= i %></a></li>
+                  <%
+                	}else if(theme.menu[i]+'' == '/records'){
+                		nav_btn_class = 'other-button';
+                  	new_tab = '';
+                  	href = theme.menu[i]+'';
+                	%>
+                  	<li id="page-button-records" class="other_navigation__item navigation__item"><a href="<%- href %>" title="" class="<%= nav_btn_class %>"><%= i %></a></li>
+                  <%
+                	}else {
+                    nav_btn_class = 'other-button';
+                    new_tab = '';
+                    href = theme.menu[i]+''; 
+                  %>
+                    <li class="other_navigation__item navigation__item"><a href="<%- href %>" title="" class="<%= nav_btn_class %>"><%= i %></a></li>
+                 <% }%>               
               <% } %>
 
             </ul>

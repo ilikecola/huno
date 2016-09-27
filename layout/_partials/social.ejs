@@ -53,13 +53,20 @@ classes that you can use:
 
     <% if (config.social.github) { %>
       <!-- Github -->
-      <li class="navigation__item">
-        <a href="https://github.com/<%= config.social.github %>" title="Huno on GitHub">
+      <li id="social-button-github" class="navigation__item" style="display:inline-block" >
+        <a href="https://github.com/<%= config.social.github %>" target="_blank" title="ilikecola on GitHub">
           <i class='icon icon-social-github'></i>
           <span class="label">GitHub</span>
         </a>
       </li>
     <% } %>
+    
+    <li id="social-button-twitter" class="navigation__item" style="display:inline-block" >
+        <a href="https://twitter.com/tkscarlet"  target="_blank" title="ilikecola on Twitter">
+          <i class='icon icon-social-twitter'></i>
+          <span class="label">Twitter</span>
+        </a>
+      </li>
 
     <!-- China social icon -->
     <!--
@@ -70,15 +77,16 @@ classes that you can use:
           <span class="label">Douban</span>
         </a>
       </li>
-
-      <li class="navigation__item">
-        <a href="" title="">
+    -->
+    
+      <li id="social_button-weibo" class="navigation__item" style="display:inline-block" >
+        <a href="http://weibo.com/2057404752"  target="_blank" title="ilikecola on Weibo">
           <i class='icon cs-icon-weibo'></i>
           <span class="label">Weibo</span>
         </a>
       </li>
 
-    -->
+
 
 
 

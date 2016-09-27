@@ -23,8 +23,6 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: inline-block;
-  text-decoration: inherit;
 }
 
 [class^="cs-icon-"]:before,

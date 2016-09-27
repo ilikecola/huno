@@ -53,6 +53,7 @@
     <% if (theme.favicon){ %>
       <link rel="icon" type="image/x-icon" href="<%- theme.favicon %>">
     <% } %>
+    <%- css('css/animsition.min.css') %>
     <%- css('css/uno.css') %>
     <%- css('css/highlight') %>
     <%- css('css/archive.css') %>
@@ -67,8 +68,11 @@
     </span>
 
     <%- partial('_partials/side-panel') %>
-
-    <div class="content-wrapper">
+		<% if (!is_post()) { %> 
+    <div class="animsition content-wrapper-list">
+    <% } else { %>
+    <div class="animsition content-wrapper-post">
+    <% } %>
         <div class="content-wrapper__inner entry">
             <%- body %>
             <%- partial('_partials/footer') %>
@@ -79,6 +83,7 @@
     <script src="<%- config.root %>js/jquery.min.js"></script>
     <script src="<%- config.root %>js/main.js"></script>
     <script src="<%- config.root %>js/scale.fix.js"></script>
+    <script src="<%- config.root %>js/animsition.min.js"></script>
     
 
     <%- partial('_scripts/mathjax') %>

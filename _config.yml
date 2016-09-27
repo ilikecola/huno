@@ -1,8 +1,10 @@
 # Header
 menu:
-  首页: /#blog
-  关于: /about
-  归档: /archive
+  Home: /
+  Blog: /#blog
+  About: /about
+  Records: /records
+  Shadowsocks: /#SS
 
 # Site favicon
 favicon: /favicon.png

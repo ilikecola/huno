@@ -1103,7 +1103,7 @@ code {
   z-index: 800;
   width: 68%;
   min-height: 1719.730px;
-*  max-width: 960px;
+/*  max-width: 960px; */
   margin-left: 32%; }
   
 .content-wrapper-list:before {
@@ -1122,7 +1122,7 @@ code {
 .content-wrapper-post {
   z-index: 800;
   width: 68%;
-*  max-width: 960px;
+/*  max-width: 960px; */
   margin-left: 32%; }
   
 .content-wrapper-post:before {
@@ -1163,7 +1163,32 @@ code {
 .logo {
   border-radius: 50%;
   border: 3px solid #FFF;
-  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3);
+  -webkit-animation:rotate 9.5s linear 0s normal none infinite;
+  -moz-animation:rotate 9.5s linear 0s normal none infinite;
+  -ms-animation:rotate 9.5s linear 0s normal none infinite;
+  -o-animation:rotate 9.5s linear 0s normal none infinite;
+/* animation: name duration timing-function delay iteration-count direction; */
+   }
+   
+@-webkit-keyframes rotate{
+from{-webkit-transform:rotate(0deg)}
+to{-webkit-transform:rotate(360deg)}
+}
+@-moz-keyframes rotate{
+from{-moz-transform:rotate(0deg)}
+to{-moz-transform:rotate(360deg)}
+}
+@-ms-keyframes rotate{
+from{-ms-transform:rotate(0deg)}
+to{-ms-transform:rotate(360deg)}
+}
+@-o-keyframes rotate{
+from{-o-transform:rotate(0deg)}
+to{-o-transform:rotate(360deg)}
+}
+
+
 
 hr {
   border: none; }
@@ -1427,7 +1452,8 @@ nav {
       opacity: 1; }
 
 .navigation--social {
-*  margin-left: 0em; }
+/*  margin-left: 0em; */
+	}
   .navigation--social a {
     padding: 6px 8px 6px 9px; }
     .navigation--social a .label {

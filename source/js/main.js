@@ -24,37 +24,38 @@ $(document).ready(function() {
 
   $('a.home-button').click(function() {    
     if ($('.panel-cover').hasClass('panel-cover--collapsed')) {
-    	$('.panel-cover').removeClass('animated panel-cover--collapsed slideInLeft');
-    	$('.content-wrapper-post').removeClass('animated slideInLeft');
-    	$('.content-wrapper-list').removeClass('animated slideInLeft');
-    	$('.panel-cover').removeClass('animsition');
-    	$('.content-wrapper-post').removeClass('animsition');
-    	$('.content-wrapper-list').removeClass('animsition');
-    	$('.panel-cover').addClass('animated slideInRight');	
-    	$('.content-wrapper-post').addClass('animated slideInRight');
-    	$('.content-wrapper-list').addClass('animated slideInRight');
-			$('#page-button-home').css('display','none');
-    	$('#page-button-blog').css('display','inline-block');
-    	$('#page-button-ss').css('display','inline-block');
-    	$('#page-button-about').css('display','none');
-    	$('#page-button-records').css('display','none');
-    	$('nav').css('display','inline-block');
+//    	$('.panel-cover').removeClass('animated panel-cover--collapsed slideInLeft');
+//    	$('.content-wrapper-post').removeClass('animated slideInLeft');
+//    	$('.content-wrapper-list').removeClass('animated slideInLeft');
+//    	$('.panel-cover').removeClass('animsition');
+//    	$('.content-wrapper-post').removeClass('animsition');
+//    	$('.content-wrapper-list').removeClass('animsition');
+//    	$('.panel-cover').addClass('animated slideInRight');	
+//    	$('.content-wrapper-post').addClass('animated slideInRight');
+//    	$('.content-wrapper-list').addClass('animated slideInRight');
+//			$('#page-button-home').css('display','none');
+//    	$('#page-button-blog').css('display','inline-block');
+//    	$('#page-button-ss').css('display','inline-block');
+//    	$('#page-button-about').css('display','none');
+//    	$('#page-button-records').css('display','none');
+//    	$('nav').css('display','inline-block');
+		  window.location.href="/"; 
     }
-    else{
-    	$('.panel-cover').removeClass('animated slideInRight');
-    	$('.content-wrapper-post').removeClass('animated slideInRight');
-    	$('.content-wrapper-list').removeClass('animated slideInRight');
-    	$('.content-wrapper-list').removeClass('animsition');
-    	$('.panel-cover').addClass('animated panel-cover--collapsed slideInLeft');
-    	$('.content-wrapper-post').addClass('animated slideInLeft');
-    	$('.content-wrapper-list').addClass('animated slideInLeft');
-    	$('#page-button-home').css('display','block');
-    	$('#page-button-blog').css('display','block');
-    	$('#page-button-ss').css('display','block');
-    	$('#page-button-about').css('display','block');
-    	$('#page-button-records').css('display','block');
-    	$('nav').css('display','table');
-    }    
+//    else{
+//    	$('.panel-cover').removeClass('animated slideInRight');
+//    	$('.content-wrapper-post').removeClass('animated slideInRight');
+//    	$('.content-wrapper-list').removeClass('animated slideInRight');
+//    	$('.content-wrapper-list').removeClass('animsition');
+//    	$('.panel-cover').addClass('animated panel-cover--collapsed slideInLeft');
+//    	$('.content-wrapper-post').addClass('animated slideInLeft');
+//    	$('.content-wrapper-list').addClass('animated slideInLeft');
+//    	$('#page-button-home').css('display','block');
+//    	$('#page-button-blog').css('display','block');
+//    	$('#page-button-ss').css('display','block');
+//    	$('#page-button-about').css('display','block');
+//    	$('#page-button-records').css('display','block');
+//    	$('nav').css('display','table');
+//    }    
   });
   
   $('a.blog-button').click(function() {
@@ -72,6 +73,7 @@ $(document).ready(function() {
     $('#page-button-about').css('display','block');
     $('#page-button-records').css('display','block');
     $('nav').css('display','table');
+    $(document.body).css({"overflow-x":"visible","overflow-y":"visible"});
   });
   
 	if (window.location.hash && window.location.hash == '#blog') {
@@ -85,6 +87,7 @@ $(document).ready(function() {
     $('#page-button-about').css('display','none');
     $('#page-button-records').css('display','none')
     $('nav').css('display','inline-block');
+    $(document.body).css({"overflow-x":"hidden","overflow-y":"hidden"});
   }
   
   if (window.location.pathname != '/') {       // if hexo in subdir of site, should change this line

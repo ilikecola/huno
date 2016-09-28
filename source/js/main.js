@@ -78,6 +78,8 @@ $(document).ready(function() {
   
 	if (window.location.hash && window.location.hash == '#blog') {
     $('.panel-cover').addClass('panel-cover--collapsed');
+    $("img.excerpt").css('height','50%');
+    $("img.excerpt").css('width','50%');
   }
   
   if(!($('.panel-cover').hasClass('panel-cover--collapsed'))){
